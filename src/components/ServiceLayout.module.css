@@ -1,0 +1,130 @@
+.hero {
+  background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--white) 100%);
+  padding: 92px 0 72px;
+  border-bottom: 1px solid var(--border);
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.hero > .container > p:first-child {
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 14px;
+}
+
+.intro {
+  max-width: 760px;
+}
+
+.heroImage {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: 0 16px 34px rgba(18, 40, 69, 0.1);
+}
+
+.section,
+.sectionAlt {
+  padding: 68px 0;
+}
+
+.section {
+  background: transparent;
+}
+
+.sectionAlt {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.section ul {
+  margin: 0;
+  padding-left: 24px;
+}
+
+.sectionAlt ul {
+  margin: 0;
+  padding-left: 24px;
+  display: grid;
+  gap: 10px;
+}
+
+.capabilityList {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 30px;
+}
+
+.sectionAlt li {
+  color: var(--secondary-dark);
+}
+
+.pillarGrid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.pillarCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 10px 24px rgba(15, 44, 76, 0.07);
+}
+
+.pillarCard h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.kpiGrid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.kpiCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 10px 24px rgba(15, 44, 76, 0.07);
+}
+
+.kpiCard h3 {
+  color: var(--secondary-dark);
+  margin-bottom: 4px;
+}
+
+.kpiCard p {
+  margin: 0;
+  color: var(--subtle-text);
+}
+
+@media (max-width: 640px) {
+  .heroGrid,
+  .pillarGrid,
+  .kpiGrid,
+  .capabilityList {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+}

@@ -1,0 +1,92 @@
+.page {
+  background: transparent;
+  padding: 88px 0;
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.heroImage {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 920px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.linkGrid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.linkCard {
+  text-decoration: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  border-radius: 10px;
+  padding: 16px;
+  font-weight: 600;
+  box-shadow: 0 8px 20px rgba(25, 49, 80, 0.06);
+  display: grid;
+  gap: 8px;
+}
+
+.linkCard strong {
+  color: var(--secondary-dark);
+}
+
+.linkCard span {
+  font-weight: 500;
+  color: var(--body-text);
+  font-size: 14px;
+}
+
+.contactGrid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.contactGrid > div {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  background: var(--surface-soft);
+  box-shadow: 0 8px 20px rgba(25, 49, 80, 0.06);
+}
+
+.contactGrid h3 {
+  font-size: 18px;
+  color: var(--primary-dark);
+}
+
+.bulletList {
+  margin-top: 12px;
+  padding-left: 22px;
+  display: grid;
+  gap: 8px;
+}
+
+.bulletList li {
+  color: var(--body-text);
+}
+
+@media (max-width: 940px) {
+  .linkGrid,
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 20px;
+  }
+}

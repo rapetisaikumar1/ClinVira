@@ -1,0 +1,66 @@
+{
+  "generatedAt": "2026-04-20T19:48:58.646Z",
+  "model": "gemini-2.5-flash-image",
+  "items": [
+    {
+      "key": "hero",
+      "title": "Hero Section",
+      "file": "hero.png",
+      "mimeType": "image/png"
+    },
+    {
+      "key": "what-we-do",
+      "title": "What We Do",
+      "file": "what-we-do.png",
+      "mimeType": "image/png"
+    },
+    {
+      "key": "our-solution",
+      "title": "Our Solution",
+      "file": "our-solution.png",
+      "mimeType": "image/png"
+    },
+    {
+      "key": "key-benefits",
+      "title": "Key Benefits Icons",
+      "file": "key-benefits.png",
+      "mimeType": "image/png"
+    },
+    {
+      "key": "services",
+      "title": "Services Cards",
+      "file": "services.png",
+      "mimeType": "image/png"
+    },
+    {
+      "key": "who-we-serve",
+      "title": "Who We Serve",
+      "file": "who-we-serve.png",
+      "mimeType": "image/png"
+    },
+    {
+      "key": "why-clinvira",
+      "title": "Why Clinvira",
+      "file": "why-clinvira.png",
+      "mimeType": "image/png"
+    },
+    {
+      "key": "technology-stack",
+      "title": "Technology Stack",
+      "file": "technology-stack.png",
+      "mimeType": "image/png"
+    },
+    {
+      "key": "contact-cta",
+      "title": "Contact / CTA",
+      "file": "contact-cta.png",
+      "mimeType": "image/png"
+    },
+    {
+      "key": "social-banner",
+      "title": "Social / OG Banner",
+      "file": "social-banner.png",
+      "mimeType": "image/png"
+    }
+  ]
+}
