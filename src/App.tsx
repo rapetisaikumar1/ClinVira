@@ -10,6 +10,7 @@ import Manufacturing from "./pages/Manufacturing";
 import AIAnalytics from "./pages/AIAnalytics";
 import CRM from "./pages/CRM";
 import DigitalInnovation from "./pages/DigitalInnovation";
+import Solutions from "./pages/Solutions";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/services/ai-analytics" element={<AIAnalytics />} />
           <Route path="/services/crm" element={<CRM />} />
           <Route path="/services/digital-innovation" element={<DigitalInnovation />} />
+          <Route path="/solutions" element={<Solutions />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Navigate to="/" replace />} />
