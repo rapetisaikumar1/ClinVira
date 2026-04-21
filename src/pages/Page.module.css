@@ -1,27 +1,50 @@
 .page {
   background: transparent;
-  padding: 88px 0;
+  padding: 100px 0;
 }
 
 .container {
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 32px;
+  animation: fadeUp 0.7s var(--ease-out) both;
+}
+
+.container > h1 {
+  background: linear-gradient(135deg, #0a1f44 0%, #122a5c 40%, #0d9488 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  max-width: 860px;
+}
+
+.container > p:first-of-type {
+  max-width: 780px;
+  font-size: 17.5px;
+  line-height: 1.7;
+  color: var(--slate-600);
 }
 
 .heroImage {
-  margin-top: 20px;
+  margin-top: 32px;
   width: 100%;
-  max-width: 920px;
-  border-radius: 12px;
+  max-width: 960px;
+  border-radius: var(--radius-xl);
   border: 1px solid var(--border);
+  box-shadow: var(--shadow-xl);
+  transition: transform 0.5s var(--ease-smooth), box-shadow 0.5s var(--ease-smooth);
+}
+
+.heroImage:hover {
+  transform: translateY(-4px) scale(1.005);
+  box-shadow: 0 32px 70px rgba(10, 31, 68, 0.2);
 }
 
 .linkGrid {
-  margin-top: 24px;
+  margin-top: 32px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  gap: 18px;
 }
 
 .linkCard {
@@ -29,63 +52,180 @@
   background: var(--surface);
   border: 1px solid var(--border);
   color: var(--text-primary);
-  border-radius: 10px;
-  padding: 16px;
+  border-radius: var(--radius-lg);
+  padding: 24px 22px;
   font-weight: 600;
-  box-shadow: 0 8px 20px rgba(25, 49, 80, 0.06);
+  box-shadow: var(--shadow-sm);
   display: grid;
   gap: 8px;
+  transition: transform 0.3s var(--ease-smooth), box-shadow 0.3s var(--ease-smooth), border-color 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.linkCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent-gradient);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease-out);
+}
+
+.linkCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(20, 184, 166, 0.35);
+}
+
+.linkCard:hover::before {
+  transform: scaleX(1);
 }
 
 .linkCard strong {
-  color: var(--secondary-dark);
+  color: var(--primary-dark);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.linkCard strong::after {
+  content: "→";
+  color: var(--accent);
+  font-weight: 700;
+  transition: transform 0.25s var(--ease-smooth);
+}
+
+.linkCard:hover strong::after {
+  transform: translateX(5px);
 }
 
 .linkCard span {
   font-weight: 500;
-  color: var(--body-text);
-  font-size: 14px;
+  color: var(--slate-500);
+  font-size: 13.5px;
+  line-height: 1.55;
 }
 
 .contactGrid {
-  margin-top: 24px;
+  margin-top: 32px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  gap: 18px;
 }
 
 .contactGrid > div {
   border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 16px;
-  background: var(--surface-soft);
-  box-shadow: 0 8px 20px rgba(25, 49, 80, 0.06);
+  border-radius: var(--radius-lg);
+  padding: 26px 22px;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s var(--ease-smooth), box-shadow 0.3s var(--ease-smooth), border-color 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.contactGrid > div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--accent-gradient);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease-out);
+}
+
+.contactGrid > div:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(20, 184, 166, 0.35);
+}
+
+.contactGrid > div:hover::before {
+  transform: scaleX(1);
 }
 
 .contactGrid h3 {
-  font-size: 18px;
+  font-size: 17px;
   color: var(--primary-dark);
+  margin-bottom: 10px;
+}
+
+.contactGrid p {
+  margin: 0;
+  color: var(--slate-600);
+  font-size: 14.5px;
+  line-height: 1.6;
 }
 
 .bulletList {
-  margin-top: 12px;
-  padding-left: 22px;
+  margin-top: 14px;
+  padding: 0;
   display: grid;
-  gap: 8px;
+  gap: 10px;
+  list-style: none;
 }
 
 .bulletList li {
-  color: var(--body-text);
+  position: relative;
+  padding-left: 28px;
+  color: var(--slate-600);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.bulletList li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+  box-shadow: 0 3px 8px rgba(20, 184, 166, 0.3);
+}
+
+.bulletList li::after {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 16px;
+  height: 16px;
+  color: var(--white);
+  font-size: 10px;
+  font-weight: 900;
+  text-align: center;
+  line-height: 16px;
 }
 
 @media (max-width: 940px) {
   .linkGrid,
   .contactGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .page {
+    padding: 72px 0;
   }
 }
 
 @media (max-width: 640px) {
+  .linkGrid,
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+
   .container {
     padding: 0 20px;
   }
