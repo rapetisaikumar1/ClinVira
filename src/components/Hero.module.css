@@ -1,82 +1,57 @@
 .hero {
   position: relative;
-  min-height: 92vh;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
   overflow: hidden;
   isolation: isolate;
-  background:
-    radial-gradient(1200px 700px at 85% 20%, rgba(20, 184, 166, 0.18), transparent 60%),
-    radial-gradient(900px 600px at 10% 90%, rgba(14, 165, 233, 0.12), transparent 55%),
-    linear-gradient(135deg, #f5faff 0%, #eef4fb 60%, #e6f7f4 100%);
+  background: var(--bg-deep);
 }
 
-.hero::before,
-.hero::after {
-  content: "";
+.backgroundImage {
   position: absolute;
-  border-radius: 50%;
-  filter: blur(60px);
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
   opacity: 0.55;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.hero::before {
-  width: 520px;
-  height: 520px;
-  top: -120px;
-  right: -80px;
-  background: radial-gradient(circle, rgba(20, 184, 166, 0.5) 0%, transparent 70%);
-  animation: floatY 9s ease-in-out infinite;
-}
-
-.hero::after {
-  width: 420px;
-  height: 420px;
-  bottom: -160px;
-  left: -120px;
-  background: radial-gradient(circle, rgba(14, 165, 233, 0.35) 0%, transparent 70%);
-  animation: floatY 11s ease-in-out infinite reverse;
 }
 
 .overlay {
-  position: relative;
-  z-index: 3;
-  width: 100%;
-  min-height: 92vh;
+  position: absolute;
+  inset: 0;
   background: linear-gradient(
-    90deg,
-    rgba(248, 251, 255, 0.96) 0%,
-    rgba(248, 251, 255, 0.88) 40%,
-    rgba(248, 251, 255, 0.45) 68%,
-    rgba(248, 251, 255, 0.15) 100%
+    135deg,
+    #050816 0%,
+    rgba(15, 23, 42, 0.92) 60%,
+    rgba(5, 8, 22, 0.7) 100%
   );
+  z-index: 1;
+}
+
+.overlay::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(800px 500px at 80% 20%, rgba(45, 212, 191, 0.12), transparent 60%),
+    radial-gradient(700px 500px at 10% 90%, rgba(14, 165, 233, 0.1), transparent 60%);
+  pointer-events: none;
 }
 
 .container {
+  position: relative;
+  z-index: 2;
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0 56px;
-  min-height: 92vh;
-  display: flex;
-  align-items: center;
+  padding: 96px 32px;
+  width: 100%;
 }
 
 .content {
   max-width: 720px;
-  text-align: left;
   animation: fadeUp 0.8s var(--ease-out) both;
-}
-
-.content > h1 {
-  animation: fadeUp 0.9s 0.15s var(--ease-out) both;
-  background: linear-gradient(135deg, #0a1f44 0%, #122a5c 40%, #0d9488 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.content > p {
-  animation: fadeUp 0.9s 0.3s var(--ease-out) both;
 }
 
 .kicker {
@@ -84,60 +59,65 @@
   align-items: center;
   gap: 10px;
   color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
   font-size: 12.5px;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  margin-bottom: 24px;
   padding: 8px 16px;
-  background: rgba(20, 184, 166, 0.1);
-  border: 1px solid rgba(20, 184, 166, 0.22);
+  background: rgba(45, 212, 191, 0.08);
+  border: 1px solid rgba(45, 212, 191, 0.22);
   border-radius: var(--radius-pill);
-  backdrop-filter: blur(8px);
-  animation: fadeUp 0.8s var(--ease-out) both;
+  margin: 0 0 24px;
 }
 
 .kicker::before {
   content: "";
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: var(--accent);
-  animation: pulseGlow 2s ease-in-out infinite;
+  box-shadow: 0 0 10px var(--accent);
 }
 
-.content p {
+.content h1 {
+  font-size: clamp(40px, 5.6vw, 68px);
+  line-height: 1.05;
+  margin: 0 0 22px;
+  color: var(--text-primary);
+  letter-spacing: -0.03em;
+}
+
+.content > p {
+  font-size: 18px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0 0 36px;
   max-width: 620px;
-  font-size: 17.5px;
-  line-height: 1.75;
-  color: var(--slate-600);
 }
 
 .actions {
   display: flex;
   gap: 14px;
-  margin-top: 36px;
-  animation: fadeUp 0.9s 0.45s var(--ease-out) both;
+  flex-wrap: wrap;
 }
 
 .primaryButton,
 .secondaryButton {
   text-decoration: none;
-  padding: 14px 26px;
+  padding: 14px 30px;
   border-radius: var(--radius-pill);
   font-weight: 600;
   font-size: 15px;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   transition: transform 0.25s var(--ease-smooth), box-shadow 0.25s var(--ease-smooth), filter 0.2s;
-  letter-spacing: 0.01em;
 }
 
 .primaryButton {
   background: var(--accent-gradient);
-  color: var(--white);
-  box-shadow: 0 12px 28px rgba(20, 184, 166, 0.34);
+  color: #050816;
+  box-shadow: 0 14px 32px rgba(45, 212, 191, 0.3);
 }
 
 .primaryButton::after {
@@ -147,66 +127,35 @@
 
 .primaryButton:hover {
   transform: translateY(-2px);
-  box-shadow: 0 18px 36px rgba(20, 184, 166, 0.42);
+  box-shadow: 0 18px 38px rgba(45, 212, 191, 0.4);
   filter: brightness(1.06);
 }
 
 .primaryButton:hover::after {
-  transform: translateX(4px);
+  transform: translateX(5px);
 }
 
 .secondaryButton {
-  border: 1.5px solid var(--border-strong);
-  color: var(--primary-dark);
-  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--border-strong);
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.03);
   backdrop-filter: blur(8px);
 }
 
 .secondaryButton:hover {
-  transform: translateY(-2px);
   border-color: var(--accent);
   color: var(--accent);
-  background: var(--white);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  background: rgba(45, 212, 191, 0.06);
 }
 
-.backgroundImage {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: min(54vw, 860px);
-  object-fit: cover;
-  object-position: top right;
-  opacity: 0.9;
-  z-index: 2;
-  mask-image: linear-gradient(90deg, transparent 0%, black 30%, black 100%);
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 30%, black 100%);
-  animation: fadeIn 1.2s var(--ease-smooth) 0.2s both;
-}
-
-@media (max-width: 980px) {
-  .backgroundImage {
-    width: 100%;
-    opacity: 0.28;
-    mask-image: none;
-    -webkit-mask-image: none;
+@media (max-width: 880px) {
+  .hero {
+    min-height: 80vh;
   }
 
   .container {
-    padding: 80px 32px;
-    min-height: 78vh;
-  }
-
-  .hero,
-  .overlay {
-    min-height: 78vh;
-  }
-}
-
-@media (max-width: 620px) {
-  .container {
-    padding: 60px 20px;
+    padding: 64px 24px;
   }
 
   .actions {
@@ -217,10 +166,5 @@
   .primaryButton,
   .secondaryButton {
     justify-content: center;
-    padding: 14px 22px;
-  }
-
-  .content p {
-    font-size: 16px;
   }
 }

@@ -12,10 +12,21 @@ const serviceLinks = [
   { label: "Digital Innovation", to: "/services/digital-innovation" },
 ];
 
+const solutionLinks = [
+  { label: "Regulatory Compliance", to: "/solutions/regulatory-compliance" },
+  { label: "Data Governance", to: "/solutions/data-governance" },
+  { label: "Pharma Supply Chain", to: "/solutions/pharma-supply-chain" },
+  { label: "Clinical Data Management", to: "/solutions/clinical-data-management" },
+  { label: "Validation & CSV", to: "/solutions/validation-csv" },
+];
+
 function Header() {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const showServiceSubnav = location.pathname === "/services" || location.pathname.startsWith("/services/");
+  const isServicesArea = location.pathname === "/services" || location.pathname.startsWith("/services/");
+  const isSolutionsArea = location.pathname === "/solutions" || location.pathname.startsWith("/solutions/");
+  const showServiceSubnav = isServicesArea;
+  const showSolutionsSubnav = isSolutionsArea;
 
   useEffect(() => {
     setIsMenuOpen(false);
@@ -54,6 +65,17 @@ function Header() {
         <div className={`${styles.subnav} ${isMenuOpen ? styles.subnavOpen : ""}`}>
           <div className={styles.container}>
             {serviceLinks.map((item) => (
+              <NavLink key={item.to} to={item.to} className={styles.subLink}>
+                {item.label}
+              </NavLink>
+            ))}
+          </div>
+        </div>
+      )}
+      {showSolutionsSubnav && (
+        <div className={`${styles.subnav} ${isMenuOpen ? styles.subnavOpen : ""}`}>
+          <div className={styles.container}>
+            {solutionLinks.map((item) => (
               <NavLink key={item.to} to={item.to} className={styles.subLink}>
                 {item.label}
               </NavLink>

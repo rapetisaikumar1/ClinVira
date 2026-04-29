@@ -11,7 +11,7 @@ type KPI = {
   value: string;
 };
 
-type ServiceLayoutProps = {
+export type ServiceLayoutProps = {
   title: string;
   subtitle: string;
   intro: string;
@@ -39,20 +39,24 @@ function ServiceLayout({
   return (
     <>
       <section className={styles.hero}>
-        <div className={`${styles.container} ${styles.heroGrid}`}>
-          <div>
-            <p>{subtitle}</p>
+        <img className={styles.heroImage} src={heroImage} alt={heroImageAlt} />
+        <div className={styles.heroOverlay} />
+        <div className={styles.container}>
+          <div className={styles.heroContent}>
+            <p className={styles.kicker}>{subtitle}</p>
             <h1>{title}</h1>
             <p className={styles.intro}>{intro}</p>
           </div>
-          <img className={styles.heroImage} src={heroImage} alt={heroImageAlt} />
         </div>
       </section>
 
       <section className={styles.section}>
         <div className={styles.container}>
-          <h2>What We Do</h2>
-          <p>{whatWeDo}</p>
+          <div className={styles.sectionHead}>
+            <p className={styles.sectionLabel}>What We Do</p>
+            <h2>An enterprise approach built for regulated environments</h2>
+            <p>{whatWeDo}</p>
+          </div>
           <div className={styles.pillarGrid}>
             {pillars.map((pillar) => (
               <article key={pillar.title} className={styles.pillarCard}>
@@ -66,7 +70,10 @@ function ServiceLayout({
 
       <section className={styles.sectionAlt}>
         <div className={styles.container}>
-          <h2>Key Capabilities</h2>
+          <div className={styles.sectionHead}>
+            <p className={styles.sectionLabel}>Key Capabilities</p>
+            <h2>What we deliver</h2>
+          </div>
           <ul className={styles.capabilityList}>
             {capabilities.map((capability) => (
               <li key={capability}>{capability}</li>
@@ -77,8 +84,11 @@ function ServiceLayout({
 
       <section className={styles.section}>
         <div className={styles.container}>
-          <h2>Business Impact</h2>
-          <p>{businessImpact}</p>
+          <div className={styles.sectionHead}>
+            <p className={styles.sectionLabel}>Business Impact</p>
+            <h2>Outcomes that matter to the business</h2>
+            <p>{businessImpact}</p>
+          </div>
           <div className={styles.kpiGrid}>
             {kpis.map((kpi) => (
               <article key={kpi.label} className={styles.kpiCard}>
