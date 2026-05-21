@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import ScrollToTop from "./components/ScrollToTop";
+import CookieBanner from "./components/CookieBanner";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -25,6 +26,7 @@ function App() {
     <div className="app-shell">
       <ScrollToTop />
       <Header />
+      <CookieBanner />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
