@@ -8,8 +8,8 @@ function Footer() {
         <div className={styles.column}>
           <h3>ClinVira</h3>
           <p>
-            Digital transformation for pharmaceutical manufacturing, clinical trials,
-            validation, and health data — built for regulated environments worldwide.
+            Specialized expertise in pharmaceutical manufacturing, clinical trials,
+            pharma validation, and health data analysis — for regulated environments worldwide.
           </p>
         </div>
 

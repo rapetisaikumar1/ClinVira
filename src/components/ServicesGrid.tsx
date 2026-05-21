@@ -5,7 +5,7 @@ const services = [
   {
     title: "Pharma Manufacturing",
     description:
-      "End-to-end digital transformation for GMP-compliant pharma manufacturing — MES, electronic batch records, SCADA integration, and production intelligence.",
+      "GMP-compliant pharma manufacturing — MES, electronic batch records, SCADA integration, and production intelligence for regulated sites.",
     to: "/services/pharma-manufacturing",
     primary: true,
   },

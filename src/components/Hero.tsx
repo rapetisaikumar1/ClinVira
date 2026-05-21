@@ -17,9 +17,9 @@ function Hero() {
               Manufacturing
             </h1>
             <p>
-              ClinVira delivers end-to-end digital transformation for pharmaceutical manufacturing
-              operations — GMP-compliant MES implementations, electronic batch records, production
-              analytics, and validated quality systems built for regulated environments.
+              ClinVira specializes in pharmaceutical manufacturing — GMP-compliant MES
+              implementations, electronic batch records, production analytics, and validated
+              quality systems for regulated environments.
             </p>
             <div className={styles.actions}>
               <Link to="/contact" className={styles.primaryButton}>Book Consultation</Link>

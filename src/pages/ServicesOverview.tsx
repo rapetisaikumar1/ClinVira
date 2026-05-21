@@ -14,7 +14,7 @@ const services = [
     num: "02",
     label: "Clinical Trials",
     to: "/services/clinical-trials",
-    detail: "Digital trial management from protocol design through eCTD regulatory submission.",
+    detail: "Trial management from protocol design through eCTD regulatory submission.",
     primary: false,
   },
   {
@@ -44,9 +44,9 @@ function ServicesOverview() {
               <p className={styles.kicker}>Pharmaceutical Domains</p>
               <h1 className={styles.heroTitle}>Our Services</h1>
               <p className={styles.heroIntro}>
-                ClinVira delivers specialized digital solutions across four core pharmaceutical
-                domains. Each service combines regulatory expertise, engineering execution, and
-                validated delivery for GMP-regulated environments.
+                ClinVira specializes in four core pharmaceutical domains. Each service combines
+                regulatory expertise, engineering execution, and validated delivery for
+                GMP-regulated environments.
               </p>
               <div className={styles.statsRow}>
                 <div className={styles.stat}>

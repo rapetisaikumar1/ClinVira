@@ -6,7 +6,7 @@ function Manufacturing() {
     <ServiceLayout
       title="Pharma Manufacturing"
       subtitle="Core Service Area"
-      intro="End-to-end digital transformation for GMP-compliant pharmaceutical manufacturing — from MES implementation and electronic batch records to production intelligence and release readiness."
+      intro="GMP-compliant pharmaceutical manufacturing — from MES implementation and electronic batch records to production intelligence and release readiness."
       whatWeDo="ClinVira designs and deploys integrated manufacturing platforms connecting shop-floor execution, batch management, quality systems, and production analytics for pharmaceutical sites operating under FDA 21 CFR Part 211, EU GMP Annex 11, and ICH Q10 requirements."
       capabilities={[
         "Manufacturing Execution System (MES) implementation and integration",

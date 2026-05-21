@@ -15,8 +15,8 @@ function About() {
               <span className={styles.eyebrow}>Who We Are</span>
               <h1 className={styles.heroTitle}>About ClinVira</h1>
               <p className={styles.lead}>
-                ClinVira is a pharmaceutical technology company specializing in digital transformation
-                for regulated manufacturing, clinical research, validation, and health data environments.
+                ClinVira is a pharmaceutical technology company specializing in manufacturing,
+                clinical research, validation, and health data for regulated environments.
                 We help pharmaceutical and life sciences organizations achieve operational excellence,
                 GMP compliance, and inspection readiness.
               </p>
@@ -41,8 +41,8 @@ function About() {
                   </svg>
                 </div>
                 <div className={styles.imageBadgeText}>
-                  <strong>Pharmaceutical Transformation</strong>
-                  <span>GMP &amp; Regulatory Excellence</span>
+                  <strong>Pharmaceutical Excellence</strong>
+                  <span>GMP &amp; Regulatory Expertise</span>
                 </div>
               </div>
             </div>

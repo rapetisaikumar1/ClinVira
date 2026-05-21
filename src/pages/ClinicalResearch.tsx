@@ -7,7 +7,7 @@ function ClinicalResearch() {
       title="Clinical Trials"
       subtitle="Specialized Service Area"
       intro="Technology-driven clinical trial management from protocol design through regulatory submission — built for speed, data integrity, and ICH E6 R2 GCP compliance."
-      whatWeDo="ClinVira implements digital clinical trial ecosystems connecting CTMS, EDC, eTMF, and randomization systems, enabling sponsors and CROs to execute studies with improved oversight, reduced site burden, and submission-ready data quality."
+      whatWeDo="ClinVira implements clinical trial management systems connecting CTMS, EDC, eTMF, and randomization systems, enabling sponsors and CROs to execute studies with improved oversight, reduced site burden, and submission-ready data quality."
       capabilities={[
         "Clinical Trial Management System (CTMS) implementation and configuration",
         "Electronic Data Capture (EDC) platform setup and system integration",
@@ -18,7 +18,7 @@ function ClinicalResearch() {
       ]}
       businessImpact="Sponsors and CRO teams gain faster site activation, reduced protocol deviations, real-time operational oversight, and inspection-ready trial master files throughout the study lifecycle."
       heroImage={researchImage}
-      heroImageAlt="Clinical trial management and digital operations platform"
+      heroImageAlt="Clinical trial management and operations platform"
       pillars={[
         {
           title: "Protocol-to-System Alignment",
