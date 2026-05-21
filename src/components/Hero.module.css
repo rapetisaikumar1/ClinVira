@@ -217,7 +217,7 @@
 @media (max-width: 980px) {
   .backgroundImage {
     width: 100%;
-    opacity: 0.25;
+    opacity: 0.45;
     mask-image: none;
     -webkit-mask-image: none;
   }
