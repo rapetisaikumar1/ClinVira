@@ -17,11 +17,11 @@ function Contact() {
           </div>
           <div>
             <h3>Phone</h3>
-            <p>+1 (800) 254-6847</p>
+            <p>+1 (208) 418 1217</p>
           </div>
           <div>
             <h3>Office</h3>
-            <p>Boston, MA, United States</p>
+            <p>580 Chelsea Street, East Boston, MA</p>
           </div>
         </div>
 

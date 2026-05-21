@@ -51,18 +51,12 @@ function ServicesGrid() {
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.head}>
-          <p className={styles.eyebrow}>Core Services</p>
-          <h2>Built for regulated healthcare and life sciences</h2>
-          <p>
-            End-to-end services across clinical, quality, manufacturing, analytics, and commercial—delivered
-            with enterprise discipline.
-          </p>
+          <h2>Core Service Areas</h2>
         </div>
 
         <div className={styles.grid}>
           {services.map((service) => (
             <article key={service.title} className={styles.card}>
-              <div className={styles.icon} aria-hidden>{service.icon}</div>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
               <Link to={service.to}>Learn more</Link>

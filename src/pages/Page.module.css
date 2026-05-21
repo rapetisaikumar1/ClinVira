@@ -1,6 +1,6 @@
 .page {
   background: transparent;
-  padding: 100px 0;
+  padding: 72px 0;
 }
 
 .container {
@@ -145,9 +145,12 @@
 }
 
 .heroImage {
-  margin-top: 32px;
+  margin-top: 28px;
   width: 100%;
   max-width: 960px;
+  max-height: 420px;
+  object-fit: cover;
+  object-position: center;
   border-radius: var(--radius-xl);
   border: 1px solid var(--border);
   box-shadow: var(--shadow-xl);
@@ -233,7 +236,7 @@
 }
 
 .contactGrid {
-  margin-top: 32px;
+  margin-top: 28px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;

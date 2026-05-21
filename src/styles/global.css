@@ -1,57 +1,46 @@
 :root {
-  /* Brand — Enterprise dark theme */
-  --bg-deep: #050816;
-  --bg-elevated: #0b1224;
-  --bg-elevated-2: #0f172a;
-  --primary-dark: #f1f5f9;       /* legacy alias: now light text on dark bg */
-  --secondary-dark: #cbd5e1;
-  --accent: #2dd4bf;
-  --accent-hover: #5eead4;
+  /* Brand — Light theme */
+  --primary-dark: #0a1f44;
+  --accent: #14b8a6;
+  --accent-hover: #0d9488;
   --accent-secondary: #0ea5e9;
-  --accent-soft: rgba(45, 212, 191, 0.12);
-  --accent-gradient: linear-gradient(135deg, #2dd4bf 0%, #0ea5e9 100%);
-  --hero-gradient: linear-gradient(135deg, #050816 0%, #0f172a 60%, rgba(5, 8, 22, 0.7) 100%);
+  --accent-soft: rgba(20, 184, 166, 0.1);
+  --accent-gradient: linear-gradient(135deg, #14b8a6 0%, #0ea5e9 100%);
+  --hero-gradient: linear-gradient(135deg, #0a1f44 0%, #122a5c 55%, #0d9488 100%);
 
-  /* Neutrals — re-aliased so legacy modules render dark */
-  --white: #0b1224;              /* legacy alias: card surface on dark */
-  --slate-50: rgba(255, 255, 255, 0.03);
-  --slate-100: rgba(255, 255, 255, 0.05);
-  --slate-200: rgba(255, 255, 255, 0.08);
+  /* Neutrals */
+  --white: #ffffff;
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
   --slate-300: #cbd5e1;
   --slate-400: #94a3b8;
-  --slate-500: #94a3b8;
-  --slate-600: #cbd5e1;
-  --slate-700: #e2e8f0;
-  --slate-800: #f1f5f9;
-  --slate-900: #f8fafc;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-800: #1e293b;
+  --slate-900: #0f172a;
 
-  /* Legacy aliases (kept for existing modules) */
-  --light-bg: var(--bg-deep);
-  --body-text: #cbd5e1;
-  --subtle-text: #94a3b8;
-  --success: #34d399;
-  --warning: #fbbf24;
-  --error: #f87171;
-  --info: #38bdf8;
-  --bg-primary: var(--bg-deep);
-  --bg-secondary: var(--bg-elevated);
-  --surface: rgba(255, 255, 255, 0.02);
-  --surface-strong: rgba(255, 255, 255, 0.04);
-  --surface-soft: rgba(255, 255, 255, 0.025);
-  --text-primary: #f1f5f9;
-  --text-secondary: #94a3b8;
+  /* Semantic aliases */
+  --bg-primary: #f8fbff;
+  --bg-secondary: #eff6fd;
+  --surface: #ffffff;
+  --surface-strong: #f8fafc;
+  --surface-soft: #f0f6fd;
+  --text-primary: #0a1f44;
+  --text-secondary: #475569;
   --text-muted: #64748b;
-  --border: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(255, 255, 255, 0.14);
+  --border: rgba(226, 232, 240, 0.8);
+  --border-strong: #cbd5e1;
   --container-max: 1240px;
 
-  /* Shadows — soft, dark-theme friendly */
-  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.3);
-  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.35);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.45);
-  --shadow-xl: 0 24px 60px rgba(0, 0, 0, 0.55);
-  --shadow-glow: 0 0 0 1px rgba(45, 212, 191, 0.3), 0 18px 40px rgba(45, 212, 191, 0.18);
+  /* Shadows — light-theme friendly */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.07);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 24px 60px rgba(0, 0, 0, 0.15);
+  --shadow-glow: 0 0 0 1px rgba(20, 184, 166, 0.3), 0 18px 40px rgba(20, 184, 166, 0.18);
 
   /* Radii */
   --radius-sm: 8px;
@@ -88,11 +77,7 @@ html {
 body {
   font-family: "Inter", "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
   font-feature-settings: "cv11", "ss01", "ss03";
-  background:
-    radial-gradient(1200px 600px at 85% -10%, rgba(45, 212, 191, 0.08), transparent 60%),
-    radial-gradient(900px 500px at -10% 30%, rgba(14, 165, 233, 0.07), transparent 55%),
-    linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-elevated) 100%);
-  background-attachment: fixed;
+  background: #f8fbff;
   color: var(--text-primary);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;

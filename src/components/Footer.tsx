@@ -1,61 +1,41 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/logo-clinvira.png";
 import styles from "./Footer.module.css";
 
 function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        <div className={styles.grid}>
-          <div className={styles.brand}>
-            <img src={logo} alt="ClinVira" />
-            <p>
-              Enterprise healthcare modernization partner helping regulated organizations
-              transform clinical, quality, manufacturing and commercial operations with confidence.
-            </p>
-          </div>
-
-          <div>
-            <p className={styles.colTitle}>Services</p>
-            <div className={styles.linkList}>
-              <Link to="/services/clinical-research">Clinical Research</Link>
-              <Link to="/services/quality-compliance">Quality &amp; Compliance</Link>
-              <Link to="/services/manufacturing">Manufacturing</Link>
-              <Link to="/services/ai-analytics">AI &amp; Analytics</Link>
-              <Link to="/services/crm">CRM Enablement</Link>
-            </div>
-          </div>
-
-          <div>
-            <p className={styles.colTitle}>Solutions</p>
-            <div className={styles.linkList}>
-              <Link to="/solutions/regulatory-compliance">Regulatory Compliance</Link>
-              <Link to="/solutions/data-governance">Data Governance</Link>
-              <Link to="/solutions/pharma-supply-chain">Pharma Supply Chain</Link>
-              <Link to="/solutions/clinical-data-management">Clinical Data Management</Link>
-              <Link to="/solutions/validation-csv">Validation &amp; CSV</Link>
-            </div>
-          </div>
-
-          <div>
-            <p className={styles.colTitle}>Company</p>
-            <div className={styles.linkList}>
-              <Link to="/about">About</Link>
-              <Link to="/careers">Careers</Link>
-              <Link to="/contact">Contact</Link>
-              <a href="mailto:info@clinvira.com">info@clinvira.com</a>
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.bottom}>
-          <p>© {new Date().getFullYear()} ClinVira Inc. All rights reserved.</p>
+        <div className={styles.column}>
+          <h3>ClinVira</h3>
           <p>
-            Boston, MA · United States
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
+            Enterprise healthcare modernization partner helping regulated organizations
+            transform operations with confidence.
           </p>
         </div>
+
+        <div className={styles.column}>
+          <h4>SERVICES</h4>
+          <ul>
+            <li><Link to="/services/clinical-research">Clinical Research Automation</Link></li>
+            <li><Link to="/services/quality-compliance">Quality &amp; Compliance</Link></li>
+            <li><Link to="/services/manufacturing">Manufacturing Automation</Link></li>
+            <li><Link to="/services/ai-analytics">AI &amp; Data Intelligence</Link></li>
+          </ul>
+        </div>
+
+        <div className={styles.column}>
+          <h4>CONTACT</h4>
+          <ul>
+            <li><a href="mailto:info@clinvira.com">info@clinvira.com</a></li>
+
+            <li><p>+1 (208) 418 1217</p></li>
+            <li><p>580 Chelsea Street, East Boston, MA</p></li>
+          </ul>
+        </div>
+      </div>
+
+      <div className={styles.bottom}>
+        <p>© 2026 ClinVira. All rights reserved.</p>
       </div>
     </footer>
   );

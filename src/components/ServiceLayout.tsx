@@ -39,13 +39,27 @@ function ServiceLayout({
   return (
     <>
       <section className={styles.hero}>
-        <img className={styles.heroImage} src={heroImage} alt={heroImageAlt} />
-        <div className={styles.heroOverlay} />
         <div className={styles.container}>
-          <div className={styles.heroContent}>
-            <p className={styles.kicker}>{subtitle}</p>
-            <h1>{title}</h1>
-            <p className={styles.intro}>{intro}</p>
+          <div className={styles.heroGrid}>
+
+            {/* Left: eyebrow + heading + intro */}
+            <div className={styles.heroContent}>
+              <p className={styles.kicker}>{subtitle}</p>
+              <h1>{title}</h1>
+              <p className={styles.intro}>{intro}</p>
+            </div>
+
+            {/* Right: image properly framed */}
+            <div className={styles.heroImageWrap}>
+              <img className={styles.heroImage} src={heroImage} alt={heroImageAlt} />
+              <div className={styles.heroImageBadge}>
+                <svg className={styles.heroImageBadgeIcon} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 14l-4-4 1.41-1.41L10 12.17l6.59-6.59L18 7l-8 8z" />
+                </svg>
+                <span>Enterprise Grade</span>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -58,8 +72,11 @@ function ServiceLayout({
             <p>{whatWeDo}</p>
           </div>
           <div className={styles.pillarGrid}>
-            {pillars.map((pillar) => (
+            {pillars.map((pillar, index) => (
               <article key={pillar.title} className={styles.pillarCard}>
+                <div className={styles.pillarIcon}>
+                  <span className={styles.pillarNum}>{String(index + 1).padStart(2, "0")}</span>
+                </div>
                 <h3>{pillar.title}</h3>
                 <p>{pillar.description}</p>
               </article>
@@ -92,6 +109,12 @@ function ServiceLayout({
           <div className={styles.kpiGrid}>
             {kpis.map((kpi) => (
               <article key={kpi.label} className={styles.kpiCard}>
+                <div className={styles.kpiIcon}>
+                  {/* Trending up icon */}
+                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6h-6z" />
+                  </svg>
+                </div>
                 <h3>{kpi.value}</h3>
                 <p>{kpi.label}</p>
               </article>

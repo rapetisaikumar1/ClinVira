@@ -20,7 +20,7 @@ function CTASection({
         <div className={styles.panel}>
           <h2>{title}</h2>
           <p>{description}</p>
-          <Link to={ctaHref} className={styles.button}>{ctaLabel}</Link>
+          <Link to={ctaHref} className={styles.button}>{ctaLabel} &rarr;</Link>
         </div>
       </div>
     </section>

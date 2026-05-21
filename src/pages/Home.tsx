@@ -61,8 +61,8 @@ function Home() {
 
       <ComplianceTrustBar />
       <CTASection
-        title="Transform outcomes across clinical, quality, and commercial operations"
-        description="ClinVira combines strategy, implementation, and governance to deliver high-confidence transformation outcomes at enterprise scale."
+        title={"Transform outcomes across clinical,\nquality, and commercial operations"}
+        description={"ClinVira combines strategy, implementation, and governance to deliver\nhigh-confidence transformation outcomes at enterprise scale."}
       />
     </>
   );
