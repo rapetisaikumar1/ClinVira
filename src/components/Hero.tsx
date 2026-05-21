@@ -9,17 +9,17 @@ function Hero() {
         <div className={styles.container}>
           <div className={styles.content}>
             <div className={styles.kicker}>
-              CLINVIRA ENTERPRISE PLATFORM
+              PHARMACEUTICAL MANUFACTURING EXCELLENCE
             </div>
             <h1>
-              Digital Transformation<br />
-              for Life Sciences &amp;<br />
-              Healthcare
+              Precision at Every<br />
+              Stage of Pharma<br />
+              Manufacturing
             </h1>
             <p>
-              We modernize regulated healthcare and life sciences operations through clinical
-              automation, compliant quality systems, data intelligence, and enterprise architecture
-              execution.
+              ClinVira delivers end-to-end digital transformation for pharmaceutical manufacturing
+              operations — GMP-compliant MES implementations, electronic batch records, production
+              analytics, and validated quality systems built for regulated environments.
             </p>
             <div className={styles.actions}>
               <Link to="/contact" className={styles.primaryButton}>Book Consultation</Link>
@@ -28,7 +28,7 @@ function Hero() {
           </div>
         </div>
       </div>
-      <img className={styles.backgroundImage} src={heroImage} alt="ClinVira enterprise healthcare visual" />
+      <img className={styles.backgroundImage} src={heroImage} alt="ClinVira pharmaceutical manufacturing platform" />
     </section>
   );
 }

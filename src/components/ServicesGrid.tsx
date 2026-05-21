@@ -3,46 +3,32 @@ import styles from "./ServicesGrid.module.css";
 
 const services = [
   {
-    icon: "◉",
-    title: "Clinical Research Automation",
+    title: "Pharma Manufacturing",
     description:
-      "Streamline trial operations, submissions, and data flows with protocol-driven automation.",
-    to: "/services/clinical-research",
+      "End-to-end digital transformation for GMP-compliant pharma manufacturing — MES, electronic batch records, SCADA integration, and production intelligence.",
+    to: "/services/pharma-manufacturing",
+    primary: true,
   },
   {
-    icon: "✓",
-    title: "Quality & Compliance Systems",
+    title: "Clinical Trials",
     description:
-      "Build resilient quality management aligned to FDA, GxP, HIPAA, and GDPR expectations.",
-    to: "/services/quality-compliance",
+      "Technology-driven trial management from protocol design through regulatory submission, built for speed, data integrity, and ICH E6 R2 compliance.",
+    to: "/services/clinical-trials",
+    primary: false,
   },
   {
-    icon: "◆",
-    title: "Manufacturing Automation",
+    title: "Pharma Validation",
     description:
-      "Digitize batch operations, process controls, and manufacturing intelligence.",
-    to: "/services/manufacturing",
+      "Rigorous CSV and system validation aligned to FDA 21 CFR Part 11, EU GMP Annex 11, and GAMP 5 — IQ/OQ/PQ lifecycle execution.",
+    to: "/services/pharma-validation",
+    primary: false,
   },
   {
-    icon: "◈",
-    title: "AI & Data Intelligence",
+    title: "Health Data Analysis",
     description:
-      "Deploy analytics, predictive models, and governed data products for decision velocity.",
-    to: "/services/ai-analytics",
-  },
-  {
-    icon: "◐",
-    title: "Pharma CRM Enablement",
-    description:
-      "Create connected commercial workflows across CRM, field force, and medical engagement.",
-    to: "/services/crm",
-  },
-  {
-    icon: "✦",
-    title: "Digital Innovation",
-    description:
-      "Modernize legacy platforms and unlock scalable innovation across business units.",
-    to: "/services/digital-innovation",
+      "Advanced analytics and real-world evidence platforms turning clinical, manufacturing, and pharmacovigilance data into actionable decisions.",
+    to: "/services/health-data-analysis",
+    primary: false,
   },
 ];
 
@@ -51,12 +37,19 @@ function ServicesGrid() {
     <section className={styles.section}>
       <div className={styles.container}>
         <div className={styles.head}>
-          <h2>Core Service Areas</h2>
+          <h2>Our 4 Core Pharma Domains</h2>
+          <p>Specialized services built around the full pharmaceutical value chain — from manufacturing floor to clinical evidence.</p>
         </div>
 
         <div className={styles.grid}>
           {services.map((service) => (
-            <article key={service.title} className={styles.card}>
+            <article
+              key={service.title}
+              className={`${styles.card}${service.primary ? ` ${styles.primaryCard}` : ""}`}
+            >
+              {service.primary && (
+                <span className={styles.primaryBadge}>Core Service</span>
+              )}
               <h3>{service.title}</h3>
               <p>{service.description}</p>
               <Link to={service.to}>Learn more</Link>

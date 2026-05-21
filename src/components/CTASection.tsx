@@ -9,8 +9,8 @@ type CTASectionProps = {
 };
 
 function CTASection({
-  title = "Ready to modernize your healthcare enterprise stack?",
-  description = "Partner with ClinVira to accelerate compliant transformation outcomes across clinical, quality, manufacturing, and commercial operations.",
+  title = "Ready to Transform Your Pharma Operations?",
+  description = "Partner with ClinVira for GMP-compliant manufacturing, validated systems, and inspection-ready pharmaceutical operations.",
   ctaLabel = "Talk to ClinVira",
   ctaHref = "/contact",
 }: CTASectionProps) {

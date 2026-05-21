@@ -4,39 +4,39 @@ import aiImage from "../assets/technology-stack.png";
 function AIAnalytics() {
   return (
     <ServiceLayout
-      title="AI & Data Intelligence"
-      subtitle="Service Area"
-      intro="Convert fragmented healthcare and life sciences data into governed intelligence that drives operational decisions."
-      whatWeDo="We implement data foundations, analytics models, and AI workflows designed for high-trust regulated environments where explainability and control are critical."
+      title="Health Data Analysis"
+      subtitle="Specialized Service Area"
+      intro="Advanced analytics and health data intelligence for pharmaceutical operations — turning complex clinical, manufacturing, and real-world data into actionable decisions."
+      whatWeDo="ClinVira builds governed health data platforms that transform fragmented pharmaceutical and clinical data into enterprise analytics assets — enabling pharmacovigilance signal detection, manufacturing process intelligence, real-world evidence generation, and regulatory data analytics."
       capabilities={[
-        "Lakehouse and curated data product design",
-        "Predictive risk and anomaly detection models",
-        "Role-specific real-time decision dashboards",
-        "Model governance and lifecycle controls",
-        "Operational AI workflow orchestration",
-        "KPI instrumentation and value tracking",
+        "Clinical and operational data warehouse design and implementation",
+        "Pharmacovigilance (PV) data analysis and safety signal detection",
+        "Real-world evidence (RWE) platform development and analytics",
+        "Manufacturing process analytical technology (PAT) analytics",
+        "Population health and patient outcomes analytics",
+        "Regulatory intelligence and submission data analytics",
       ]}
-      businessImpact="Data, clinical, and operations teams gain faster insight cycles, stronger forecasting confidence, and measurable value from AI investments."
+      businessImpact="Pharmaceutical data teams gain faster signal detection, stronger clinical evidence generation, manufacturing process insights, and governed data platforms that hold up under regulatory scrutiny."
       heroImage={aiImage}
-      heroImageAlt="Layered healthcare technology stack with AI analytics"
+      heroImageAlt="Pharmaceutical health data analytics and intelligence platform"
       pillars={[
         {
-          title: "Data Foundation",
-          description: "Establish trusted data pipelines with reusable semantic models across business domains.",
+          title: "Governed Data Foundation",
+          description: "Build trusted, auditable data pipelines from clinical, manufacturing, and commercial sources aligned to FAIR data principles and 21 CFR requirements.",
         },
         {
-          title: "Applied Intelligence",
-          description: "Deploy practical AI patterns that improve decisions, not just dashboards.",
+          title: "Clinical Intelligence",
+          description: "Apply advanced analytics to trial data, adverse event signals, and patient outcomes to generate robust regulatory-grade evidence.",
         },
         {
-          title: "Governed Scale",
-          description: "Embed controls for model quality, transparency, and regulatory confidence.",
+          title: "Operational Analytics",
+          description: "Deploy manufacturing process analytics, quality trending, and predictive intelligence for production and quality optimization.",
         },
       ]}
       kpis={[
-        { label: "Analytics cycle-time reduction", value: "Up to 40%" },
-        { label: "Forecasting confidence uplift", value: "+20%" },
-        { label: "Decision latency", value: "From weekly to daily" },
+        { label: "Safety signal detection speed", value: "Up to 50% faster" },
+        { label: "Data pipeline latency", value: "Near real-time from source" },
+        { label: "Analytics coverage", value: "Across all pharma domains" },
       ]}
     />
   );

@@ -291,6 +291,12 @@
   transition: transform 0.3s var(--ease-smooth), box-shadow 0.3s var(--ease-smooth), border-color 0.3s;
 }
 
+.primaryCard {
+  border-color: rgba(20, 184, 166, 0.45);
+  background: linear-gradient(135deg, #f0fdf9 0%, #eff6fd 100%);
+  box-shadow: 0 4px 28px rgba(20, 184, 166, 0.14);
+}
+
 /* Animated teal top-bar reveal on hover */
 .card::before {
   content: "";

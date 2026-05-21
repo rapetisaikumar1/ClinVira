@@ -15,7 +15,8 @@ function Contact() {
               <p className={styles.kicker}>Get in Touch</p>
               <h1 className={styles.heroTitle}>Contact ClinVira</h1>
               <p className={styles.heroIntro}>
-                Let us discuss your transformation priorities across clinical, quality, manufacturing, AI, and commercial domains.
+                Discuss your pharma manufacturing, clinical trials, validation,
+                or health data transformation needs with our specialists.
               </p>
 
               <div className={styles.contactCards}>

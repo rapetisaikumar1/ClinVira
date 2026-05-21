@@ -4,39 +4,39 @@ import manufacturingImage from "../assets/our-solution.png";
 function Manufacturing() {
   return (
     <ServiceLayout
-      title="Manufacturing Automation"
-      subtitle="Service Area"
-      intro="Build resilient, data-driven manufacturing operations with connected process controls and real-time decision support."
-      whatWeDo="ClinVira integrates shop-floor systems, quality workflows, and production analytics to improve throughput, control, and release confidence."
+      title="Pharma Manufacturing"
+      subtitle="Core Service Area"
+      intro="End-to-end digital transformation for GMP-compliant pharmaceutical manufacturing — from MES implementation and electronic batch records to production intelligence and release readiness."
+      whatWeDo="ClinVira designs and deploys integrated manufacturing platforms connecting shop-floor execution, batch management, quality systems, and production analytics for pharmaceutical sites operating under FDA 21 CFR Part 211, EU GMP Annex 11, and ICH Q10 requirements."
       capabilities={[
-        "MES and process control integration",
-        "Electronic batch record enablement",
-        "Production and quality data convergence",
-        "Deviation and exception workflow automation",
-        "Release readiness intelligence dashboards",
-        "Operational performance telemetry",
+        "Manufacturing Execution System (MES) implementation and integration",
+        "Electronic Batch Record (EBR) design, configuration, and deployment",
+        "SCADA and process control system integration",
+        "Deviation, exception, and CAPA workflow automation",
+        "Production and quality data convergence platforms",
+        "Real-time batch disposition and release readiness dashboards",
       ]}
-      businessImpact="Manufacturing teams gain higher line stability, improved release predictability, and better cross-functional coordination between production and quality."
+      businessImpact="Pharmaceutical manufacturing teams achieve higher line stability, faster batch release cycles, reduced GMP findings, and stronger inspection readiness across global sites."
       heroImage={manufacturingImage}
-      heroImageAlt="Nurse and analytics workflow visual representing connected operations"
+      heroImageAlt="Pharmaceutical manufacturing operations with connected GMP systems"
       pillars={[
         {
-          title: "Connected Operations",
-          description: "Unify production, quality, and engineering systems into a single execution model.",
+          title: "GMP-Compliant Architecture",
+          description: "Design manufacturing systems with FDA 21 CFR Part 11, Part 211, and EU GMP Annex 11 compliance built in from day one.",
         },
         {
-          title: "Exception Intelligence",
-          description: "Detect anomalies faster and route actions with role-based accountability.",
+          title: "Shop-Floor Integration",
+          description: "Connect MES, EBR, SCADA, LIMS, and ERP systems into a unified operational data model for end-to-end visibility.",
         },
         {
-          title: "Release Confidence",
-          description: "Strengthen release decisions with complete digital evidence and trend context.",
+          title: "Production Intelligence",
+          description: "Transform batch and process data into real-time decision support for production and quality leadership.",
         },
       ]}
       kpis={[
-        { label: "Deviation response acceleration", value: "Up to 30%" },
-        { label: "Batch review cycle reduction", value: "15-25%" },
-        { label: "Operational visibility", value: "24/7 dashboards" },
+        { label: "Batch release cycle time reduction", value: "20–35%" },
+        { label: "Deviation response acceleration", value: "Up to 40%" },
+        { label: "GMP audit findings", value: "Significantly reduced" },
       ]}
     />
   );

@@ -5,39 +5,31 @@ import styles from "./ServicesOverview.module.css";
 const services = [
   {
     num: "01",
-    label: "Clinical Research",
-    to: "/services/clinical-research",
-    detail: "Automate study operations, improve oversight, and reduce timeline risk.",
+    label: "Pharma Manufacturing",
+    to: "/services/pharma-manufacturing",
+    detail: "GMP-compliant MES, EBR, SCADA, and production intelligence for pharmaceutical manufacturing sites.",
+    primary: true,
   },
   {
     num: "02",
-    label: "Quality & Compliance",
-    to: "/services/quality-compliance",
-    detail: "Digitize quality workflows with inspection-ready traceability.",
+    label: "Clinical Trials",
+    to: "/services/clinical-trials",
+    detail: "Digital trial management from protocol design through eCTD regulatory submission.",
+    primary: false,
   },
   {
     num: "03",
-    label: "Manufacturing",
-    to: "/services/manufacturing",
-    detail: "Connect production and quality systems for stable operational control.",
+    label: "Pharma Validation",
+    to: "/services/pharma-validation",
+    detail: "CSV, IQ/OQ/PQ, and 21 CFR Part 11 validation across GxP-regulated computer systems.",
+    primary: false,
   },
   {
     num: "04",
-    label: "AI & Analytics",
-    to: "/services/ai-analytics",
-    detail: "Build governed data products and predictive intelligence at scale.",
-  },
-  {
-    num: "05",
-    label: "CRM",
-    to: "/services/crm",
-    detail: "Enable compliant, data-driven commercial execution across field teams.",
-  },
-  {
-    num: "06",
-    label: "Digital Innovation",
-    to: "/services/digital-innovation",
-    detail: "Modernize legacy platforms and accelerate enterprise product delivery.",
+    label: "Health Data Analysis",
+    to: "/services/health-data-analysis",
+    detail: "Clinical analytics, real-world evidence, and pharmacovigilance intelligence at scale.",
+    primary: false,
   },
 ];
 
@@ -49,26 +41,27 @@ function ServicesOverview() {
         <div className={styles.container}>
           <div className={styles.heroGrid}>
             <div className={styles.heroContent}>
-              <p className={styles.kicker}>Service Areas</p>
-              <h1 className={styles.heroTitle}>Services</h1>
+              <p className={styles.kicker}>Pharmaceutical Domains</p>
+              <h1 className={styles.heroTitle}>Our Services</h1>
               <p className={styles.heroIntro}>
-                Explore ClinVira capabilities built for enterprise healthcare and life sciences teams.
-                Each service line combines domain expertise, engineering execution, and governance-led delivery.
+                ClinVira delivers specialized digital solutions across four core pharmaceutical
+                domains. Each service combines regulatory expertise, engineering execution, and
+                validated delivery for GMP-regulated environments.
               </p>
               <div className={styles.statsRow}>
                 <div className={styles.stat}>
-                  <span>6</span>
-                  <p>Service domains</p>
+                  <span>4</span>
+                  <p>Pharma domains</p>
                 </div>
                 <div className={styles.statDivider} />
                 <div className={styles.stat}>
-                  <span>50+</span>
-                  <p>Program accelerators</p>
+                  <span>200+</span>
+                  <p>GMP implementations</p>
                 </div>
                 <div className={styles.statDivider} />
                 <div className={styles.stat}>
                   <span>Global</span>
-                  <p>Delivery model</p>
+                  <p>Delivery network</p>
                 </div>
               </div>
             </div>
@@ -97,12 +90,12 @@ function ServicesOverview() {
         <div className={styles.container}>
           <div className={styles.sectionHead}>
             <p className={styles.sectionKicker}>Our Expertise</p>
-            <h2 className={styles.sectionTitle}>Built for regulated enterprise operations</h2>
+            <h2 className={styles.sectionTitle}>Four domains. One pharmaceutical vision.</h2>
           </div>
 
           <div className={styles.grid}>
             {services.map((s) => (
-              <Link key={s.to} to={s.to} className={styles.card}>
+              <Link key={s.to} to={s.to} className={`${styles.card}${s.primary ? ` ${styles.primaryCard}` : ""}`}>
                 <div className={styles.cardIcon}>
                   <span className={styles.cardNum}>{s.num}</span>
                 </div>

@@ -6,18 +6,10 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import ServicesOverview from "./pages/ServicesOverview";
+import Manufacturing from "./pages/Manufacturing";
 import ClinicalResearch from "./pages/ClinicalResearch";
 import QualityCompliance from "./pages/QualityCompliance";
-import Manufacturing from "./pages/Manufacturing";
 import AIAnalytics from "./pages/AIAnalytics";
-import CRM from "./pages/CRM";
-import DigitalInnovation from "./pages/DigitalInnovation";
-import Solutions from "./pages/Solutions";
-import RegulatoryCompliance from "./pages/RegulatoryCompliance";
-import DataGovernance from "./pages/DataGovernance";
-import PharmaSupplyChain from "./pages/PharmaSupplyChain";
-import ClinicalDataManagement from "./pages/ClinicalDataManagement";
-import ValidationCSV from "./pages/ValidationCSV";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 
@@ -32,18 +24,23 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<ServicesOverview />} />
-          <Route path="/services/clinical-research" element={<ClinicalResearch />} />
-          <Route path="/services/quality-compliance" element={<QualityCompliance />} />
-          <Route path="/services/manufacturing" element={<Manufacturing />} />
-          <Route path="/services/ai-analytics" element={<AIAnalytics />} />
-          <Route path="/services/crm" element={<CRM />} />
-          <Route path="/services/digital-innovation" element={<DigitalInnovation />} />
-          <Route path="/solutions" element={<Solutions />} />
-          <Route path="/solutions/regulatory-compliance" element={<RegulatoryCompliance />} />
-          <Route path="/solutions/data-governance" element={<DataGovernance />} />
-          <Route path="/solutions/pharma-supply-chain" element={<PharmaSupplyChain />} />
-          <Route path="/solutions/clinical-data-management" element={<ClinicalDataManagement />} />
-          <Route path="/solutions/validation-csv" element={<ValidationCSV />} />
+
+          {/* 4 core pharmaceutical service domains */}
+          <Route path="/services/pharma-manufacturing" element={<Manufacturing />} />
+          <Route path="/services/clinical-trials" element={<ClinicalResearch />} />
+          <Route path="/services/pharma-validation" element={<QualityCompliance />} />
+          <Route path="/services/health-data-analysis" element={<AIAnalytics />} />
+
+          {/* Legacy redirects — prevent 404s for old URLs */}
+          <Route path="/services/manufacturing" element={<Navigate to="/services/pharma-manufacturing" replace />} />
+          <Route path="/services/clinical-research" element={<Navigate to="/services/clinical-trials" replace />} />
+          <Route path="/services/quality-compliance" element={<Navigate to="/services/pharma-validation" replace />} />
+          <Route path="/services/ai-analytics" element={<Navigate to="/services/health-data-analysis" replace />} />
+          <Route path="/services/crm" element={<Navigate to="/services" replace />} />
+          <Route path="/services/digital-innovation" element={<Navigate to="/services" replace />} />
+          <Route path="/solutions" element={<Navigate to="/services" replace />} />
+          <Route path="/solutions/*" element={<Navigate to="/services" replace />} />
+
           <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Navigate to="/" replace />} />

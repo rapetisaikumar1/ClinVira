@@ -5,7 +5,7 @@ const roles = [
   {
     title: "Consulting & Strategy",
     description:
-      "Transformation consultants and domain leads for clinical, quality, and manufacturing programs.",
+      "Transformation consultants and domain leads for pharma manufacturing, clinical trials, validation, and health data programs.",
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="7" width="20" height="14" rx="2" />
@@ -51,9 +51,9 @@ function Careers() {
               <p className={styles.kicker}>Join Our Team</p>
               <h1 className={styles.heroTitle}>Careers at ClinVira</h1>
               <p className={styles.heroIntro}>
-                Join teams shaping the future of healthcare and life sciences
-                transformation. We are looking for consultants, architects,
-                engineers, and compliance specialists.
+                Join teams shaping the future of pharmaceutical manufacturing,
+                clinical trials, validation, and health data transformation.
+                We are looking for consultants, engineers, and compliance specialists.
               </p>
             </div>
 
@@ -61,7 +61,7 @@ function Careers() {
               <img
                 className={styles.heroImage}
                 src={careersImage}
-                alt="Healthcare professionals collaborating"
+                alt="Pharmaceutical professionals collaborating"
               />
               <div className={styles.heroImageBadge}>
                 <div className={styles.heroBadgeIcon}>

@@ -8,18 +8,18 @@ function Footer() {
         <div className={styles.column}>
           <h3>ClinVira</h3>
           <p>
-            Enterprise healthcare modernization partner helping regulated organizations
-            transform operations with confidence.
+            Digital transformation for pharmaceutical manufacturing, clinical trials,
+            validation, and health data — built for regulated environments worldwide.
           </p>
         </div>
 
         <div className={styles.column}>
           <h4>SERVICES</h4>
           <ul>
-            <li><Link to="/services/clinical-research">Clinical Research Automation</Link></li>
-            <li><Link to="/services/quality-compliance">Quality &amp; Compliance</Link></li>
-            <li><Link to="/services/manufacturing">Manufacturing Automation</Link></li>
-            <li><Link to="/services/ai-analytics">AI &amp; Data Intelligence</Link></li>
+            <li><Link to="/services/pharma-manufacturing">Pharma Manufacturing</Link></li>
+            <li><Link to="/services/clinical-trials">Clinical Trials</Link></li>
+            <li><Link to="/services/pharma-validation">Pharma Validation</Link></li>
+            <li><Link to="/services/health-data-analysis">Health Data Analysis</Link></li>
           </ul>
         </div>
 

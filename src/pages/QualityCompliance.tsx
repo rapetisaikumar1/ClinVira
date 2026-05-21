@@ -4,39 +4,39 @@ import qualityImage from "../assets/key-benefits.png";
 function QualityCompliance() {
   return (
     <ServiceLayout
-      title="Quality & Compliance Systems"
-      subtitle="Service Area"
-      intro="Strengthen regulated operations with digital quality frameworks that are practical, auditable, and scalable."
-      whatWeDo="We modernize quality systems and compliance processes across development and commercial operations using controlled workflows, traceability, and inspection-ready reporting."
+      title="Pharma Validation"
+      subtitle="Specialized Service Area"
+      intro="Rigorous computer system validation (CSV) and GxP compliance services aligned to FDA 21 CFR Part 11, EU GMP Annex 11, and GAMP 5 methodologies."
+      whatWeDo="ClinVira delivers structured validation programs for pharmaceutical computerized systems — from risk assessment and URS development through IQ/OQ/PQ execution, periodic review, and ongoing validation maintenance — reducing compliance risk and inspection exposure."
       capabilities={[
-        "Enterprise QMS architecture and rollout",
-        "Deviation, CAPA, and change control digitization",
-        "Validation evidence and audit trail automation",
-        "SOP and policy lifecycle management",
-        "Supplier and quality event integration",
-        "Inspection preparation dashboards",
+        "Validation Master Plan (VMP) development and project governance",
+        "Risk-based IQ/OQ/PQ protocol development and execution",
+        "FDA 21 CFR Part 11 compliance assessment and gap remediation",
+        "GAMP 5 software categorization and validation lifecycle management",
+        "Audit trail review and electronic records compliance verification",
+        "Periodic review programs and ongoing validation maintenance",
       ]}
-      businessImpact="Quality leaders improve control consistency, shorten remediation cycles, and elevate audit confidence across global sites."
+      businessImpact="Quality and validation teams achieve accelerated project delivery, reduced inspection observations, and sustained validated state across a growing portfolio of GxP-regulated systems."
       heroImage={qualityImage}
-      heroImageAlt="Quality and compliance digital monitoring icons"
+      heroImageAlt="Pharmaceutical validation and GMP compliance documentation"
       pillars={[
         {
-          title: "Control Framework",
-          description: "Implement standardized quality workflows aligned to FDA and GxP expectations.",
+          title: "Risk-Based Approach",
+          description: "Apply GAMP 5 and ICH Q9 risk principles to focus validation effort where patient safety and data integrity risk is highest.",
         },
         {
-          title: "Digital Traceability",
-          description: "Ensure every quality decision is timestamped, attributable, and review-ready.",
+          title: "Lifecycle Validation",
+          description: "Maintain validated state through system changes with structured change control, impact assessment, and revalidation protocols.",
         },
         {
-          title: "Continuous Readiness",
-          description: "Maintain a live compliance posture with transparent quality health indicators.",
+          title: "Audit-Ready Evidence",
+          description: "Generate complete, reviewable validation documentation packages designed to satisfy FDA and EMA regulatory inspectors.",
         },
       ]}
       kpis={[
-        { label: "CAPA closure cycle reduction", value: "18-28%" },
-        { label: "Audit preparation effort", value: "Up to -35%" },
-        { label: "Quality visibility cadence", value: "Weekly to daily" },
+        { label: "Validation projects delivered on time", value: "Within scope" },
+        { label: "Revalidation cycle time", value: "Up to 30% faster" },
+        { label: "Inspection observations", value: "Significantly reduced" },
       ]}
     />
   );

@@ -1,15 +1,15 @@
 import styles from "./ComplianceTrustBar.module.css";
 
-const frameworks = ["FDA", "GxP", "HIPAA", "GDPR"];
+const frameworks = ["FDA 21 CFR", "EU GMP", "ICH Q10", "GAMP 5", "ISO 9001"];
 
 function ComplianceTrustBar() {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <h2 className={styles.heading}>Compliance & Trust</h2>
+        <h2 className={styles.heading}>Compliance & Regulatory Standards</h2>
         <p className={styles.subtext}>
-          Enterprise delivery model designed for regulated healthcare and life sciences<br />
-          environments.
+          Every ClinVira solution is designed and validated to meet the strictest pharmaceutical<br />
+          regulatory requirements across FDA, EMA, and global markets.
         </p>
         <div className={styles.badges}>
           {frameworks.map((item) => (
