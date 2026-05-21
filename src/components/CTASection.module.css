@@ -43,10 +43,10 @@
 .panel h2 {
   color: #ffffff;
   margin: 0 auto 24px;
-  font-size: clamp(32px, 4.5vw, 46px);
+  font-size: clamp(24px, 3vw, 34px);
   letter-spacing: -0.02em;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.25;
   white-space: pre-line;
 }
 
