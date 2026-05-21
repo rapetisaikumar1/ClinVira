@@ -75,7 +75,11 @@ function Solutions() {
 
           <div className={styles.split}>
             <div className={styles.splitCard}>
-              <div className={styles.splitIcon} aria-hidden>◉</div>
+              <div className={styles.splitIcon} aria-hidden>
+                <svg viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                </svg>
+              </div>
               <h3>What We Do</h3>
               <p>
                 We provide healthcare monitoring solutions that help care teams track important information, view
@@ -84,7 +88,12 @@ function Solutions() {
             </div>
 
             <div className={styles.splitCard}>
-              <div className={styles.splitIcon} aria-hidden>✦</div>
+              <div className={styles.splitIcon} aria-hidden>
+                <svg viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="3" />
+                  <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
+                </svg>
+              </div>
               <h3>Our Solution</h3>
               <p>
                 ClinVira Inc is a healthcare and life sciences technology company specializing in AI-driven digital

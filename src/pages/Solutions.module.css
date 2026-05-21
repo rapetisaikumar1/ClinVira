@@ -323,13 +323,19 @@
 }
 
 .sectionLabel {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  font-size: 12.5px;
+  font-size: 12px;
   font-weight: 700;
   margin: 0 0 14px;
+  padding: 7px 16px;
+  background: rgba(20, 184, 166, 0.09);
+  border: 1px solid rgba(20, 184, 166, 0.22);
+  border-radius: var(--radius-pill);
 }
 
 .sectionTitle {
@@ -350,8 +356,8 @@
    ========================================== */
 .split {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 56px;
+  grid-template-columns: 1fr 1.65fr;
+  gap: 28px;
   align-items: start;
 }
 
@@ -394,13 +400,25 @@
   width: 52px;
   height: 52px;
   border-radius: var(--radius-md);
-  background: var(--accent-soft);
-  color: var(--accent);
+  background: var(--accent-gradient);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 18px rgba(20, 184, 166, 0.28);
+  flex-shrink: 0;
+  transition: transform 0.3s var(--ease-smooth);
+}
+
+.splitCard:hover .splitIcon {
+  transform: scale(1.08) rotate(-4deg);
+}
+
+.splitIcon svg {
+  width: 22px;
+  height: 22px;
+  stroke: #ffffff;
+  fill: none;
 }
 
 .splitCard h3 {
