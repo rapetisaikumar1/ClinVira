@@ -30,34 +30,17 @@
   transform: translateY(-1px);
 }
 
-.brandIcon {
-  height: 36px;
+.brandLogo {
+  height: 48px;
   width: auto;
   flex-shrink: 0;
-  filter: drop-shadow(0 2px 8px rgba(13,148,136,0.22));
-  transition: filter 0.3s ease, transform 0.3s ease;
+  display: block;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.brand:hover .brandIcon {
-  filter: drop-shadow(0 4px 14px rgba(13,148,136,0.42));
+.brand:hover .brandLogo {
+  opacity: 0.85;
   transform: translateY(-1px);
-}
-
-.brandText {
-  font-size: 21px;
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  color: #0a1f44;
-  margin-left: 11px;
-  line-height: 1;
-  font-family: inherit;
-}
-
-.brandAccent {
-  background: linear-gradient(135deg, #0d9488 0%, #0ea5e9 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 .menuButton {
